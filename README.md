@@ -1,2 +1,2 @@
-#Simple quiz game
+# Simple quiz game
 This is a simple quiz game that I made in python. It is a simple game that asks the user questions and then tells them if they are correct or not. It is a simple game that is fun to play. I hope you enjoy it.

@@ -66,6 +66,7 @@ capitalsHard = {
     "Eritrea": "Asmara",
 }
 
+
 # Function to generate a random question
 def generate_question(difficulty):
     global used_pairs
@@ -78,7 +79,7 @@ def generate_question(difficulty):
             used_pairs.add(pair)
             break
 
-    # Generate wrong answers excluding the correct answer
+    # Generate wrong answers removing the correct answer
     wrong_answers = random.sample([value for key, value in capitals.items() if value != correct_answer], 3)
 
     # Shuffle options
@@ -108,6 +109,7 @@ def ask_question(country, options):
             print("Invalid input.")
     return answer
 
+
 # Function to check if the answer is correct
 def check_answer(answer, correct_answer):
     if answer == correct_answer:
@@ -116,6 +118,7 @@ def check_answer(answer, correct_answer):
     else:
         print("\nIncorrect!\n")
         return False
+
 
 # Ask User if he wants Easy or Hard mode
 def check_difficulty():
@@ -143,6 +146,7 @@ def quiz():
             print("Game Over!")
             print(f"Score: {score}")
             break
+
 
 # Start the quiz
 if __name__ == "__main__":
