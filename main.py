@@ -1,5 +1,6 @@
 import random
 used_pairs = set()
+
 # Define dictionary of country-capitals pairs
 capitalsEasy = {
     "France": "Paris",
@@ -67,7 +68,6 @@ capitalsHard = {
 }
 
 
-# Function to generate a random question
 def generate_question(difficulty):
     global used_pairs
     capitals = capitalsEasy if difficulty == "easy" else capitalsHard
@@ -89,7 +89,6 @@ def generate_question(difficulty):
     return country, options, correct_answer
 
 
-# Function to display a question and get user's answer
 def ask_question(country, options):
     print(f"What is the capital of {country}?")
     print(f"1. {options[0]}")
@@ -110,7 +109,6 @@ def ask_question(country, options):
     return answer
 
 
-# Function to check if the answer is correct
 def check_answer(answer, correct_answer):
     if answer == correct_answer:
         print("\nCorrect!\n")
@@ -120,7 +118,6 @@ def check_answer(answer, correct_answer):
         return False
 
 
-# Ask User if he wants Easy or Hard mode
 def check_difficulty():
     while True:
         difficulty = input("Chose Difficulty (Easy / Hard): ").lower()
@@ -131,7 +128,6 @@ def check_difficulty():
     return difficulty
 
 
-# Main quiz loop
 def quiz():
     global used_pairs
     score = 0
@@ -148,6 +144,5 @@ def quiz():
             break
 
 
-# Start the quiz
 if __name__ == "__main__":
     quiz()
