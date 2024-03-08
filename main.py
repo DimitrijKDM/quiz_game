@@ -1,7 +1,6 @@
 import random
 used_pairs = set()
 
-# Define dictionary of country-capitals pairs
 capitalsEasy = {
     "France": "Paris",
     "Russia": "Moscow",
@@ -79,10 +78,8 @@ def generate_question(difficulty):
             used_pairs.add(pair)
             break
 
-    # Generate wrong answers removing the correct answer
     wrong_answers = random.sample([value for key, value in capitals.items() if value != correct_answer], 3)
 
-    # Shuffle options
     options = [correct_answer] + wrong_answers
     random.shuffle(options)
 
